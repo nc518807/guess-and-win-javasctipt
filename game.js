@@ -11,10 +11,22 @@ let sWords = ['python','java','laravel','android','c++','swift','angular','sql',
  
      //console.log(ranNum);
      let newTempWords = sWords[ranNum];
-     console.log(newTempWords.split(""));
+     //console.log(newTempWords.split(""));
      return newTempWords;
  }
- const Scramblewords = ()=>{
+ const Scramblewords = (arr)=>{
+    for(let i = arr.length-1; i>0; i--)
+{
+    let temp = arr[i];
+    //console.log(temp);
+    let j = Math.floor(Math.random()* (i+1));
+    //.log(j);
+    arr[i] =arr[j];
+    arr[j]= temp;
+
+     
+}    
+return arr;
 
  }
 
@@ -23,8 +35,10 @@ btn.addEventListener('click',function(){
         play= true;
         btn.innerHTML= "Guess";
         guess.classList.toggle('hidden');
-      newWords =  createNewwords();
-      randomWords = Scramblewords(newWords);
+      newWords =  createNewwords(); 
+      randomWords = Scramblewords(newWords.split("")).join("");
+     // console.log(randomWords.join());
+     msg.innerHTML = randomWords;
     }
 
 })

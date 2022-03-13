@@ -1,0 +1,25 @@
+<script>
+    const myObj={
+        name:"Nagen",
+        age:25,
+        degree:"BSC csit",
+        //object inside object 
+        hobb:{
+            first:"playing",
+            Second:"dancing"
+        }
+
+    }
+
+    //console.log(`my name is ${myObj.name}`);
+    //let {name,age,degree}=myObj;
+    //console.log(`my name is ${name}`);
+    //let name,age,degree;
+    //({name,age,degree}=myObj);
+    //console.log(`my name is ${name}`);
+    //this also can be written as 
+    //let {name,age, degree}=myObj;
+    let {name,age, degree,hobb}=myObj;
+
+    console.log(`my name is ${name} and i love ${hobb.Second}`);
+</script>
